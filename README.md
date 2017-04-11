@@ -1,13 +1,15 @@
 # read_data_in_linux
 解决linux中read文件时的硬编码
 
-read_data.sh读取data.txt
-data.txt中的数据各列表示：序号（index）、学号（number）、姓名（name）、年龄（age）
-但这种读取方式存在着一些弊端：
+data.txt中的数据各列表示：序号（index）、学号（number）、姓名（name）、年龄（age）  
+
+优化前  
+read_data.sh读取data.txt     
+但这种读取方式存在着一些弊端：  
 1. 列名（read index number name age）显式地在代码中指定，如果只是想弄清楚数据文件的每列含义，则需要阅读脚本；
 2. 该脚本中指明了每列的名称，如果希望修改各字段的英文名称（比如序号的英文名称希望改为NUMBER）则需要修改脚本，且修改多处；
 3. 该脚本按一定顺序读取数据文件，因此，如果数据文件中的列顺序发生了变化，则依然需要修改脚本；
 4. 如果有其他数据文件需要按此方式读取，则需要根据数据文件的实际情况再重写一个新脚本；
 
-优化后
+优化后  
 new_read_data.sh读取new_data.txt，可以解决上述问题。
