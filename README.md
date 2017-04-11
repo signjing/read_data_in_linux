@@ -1,0 +1,2 @@
+# read_data_in_linux
+解决linux中read文件时的硬编码
